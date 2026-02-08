@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leslie Programs</title>
+  <link rel="icon" type="image/png" href="assets/portfoliofavicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <!--<li><a href="#contact">Contact</a></li>-->
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section hero">
+    <div class="hero-content">
+      <img src="assets/WelcomeImage.png" alt="Welcome" class="hero-image" style="width:500px;max-width:60vw;height:auto;display:block;margin:0 auto 1.5rem auto;object-fit:cover;" />
+      <h1>Hi, I'm Leslie</h1>
+      <p class="subtitle">Computer Science Student at UNLV</p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="mailto:leslaygonzalez@gmail.com" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="background-blobs"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p class="bio"> I am a first-generation college student with a growing passion for programming and emerging technologies. 
+      I’m a Computer Science major at UNLV and currently completing Harvard CS50’s Programming with Python. Also, I stutter occasionally. 
+      Email: leslaygonzalez@gmail.com</p>
+    <p> Professional Interests: Software Development, AI, Cloud Computing </p>
+    <p> Other Interests: Handheld Gaming Consoles, Movies, Claw Machines, Sanrio, Cycling, Writing</p>
+    <p> Tech Skills: </p>
+    <div class="skills" id="skills"></div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="project-filters" id="project-filters"></div>
+    <div class="project-grid" id="project-grid"></div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <h2>Experience</h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- Contact Section will be implemented later -->
+  <section id="contact" class="section contact">
+    <!-- <h2>Contact</h2> -->
+    <form id="contact-form" autocomplete="off">
+      <!-- <input type="text" name="name" placeholder="Your Name" required /> -->
+      <!-- <input type="email" name="email" placeholder="Your Email" required /> -->
+      <!-- <textarea name="message" placeholder="Your Message" required></textarea> -->
+      <!-- <button type="submit" class="btn primary">Send</button> -->
+    </form> 
+    <div class="social-links">
+      <!-- Social links updated -->
+      <a href="https://github.com/leslieprograms" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a href="https://linkedin.com/in/leslieprograms" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+    <footer>
+      <p>&copy; Leslie Gonzalez 2026</p>
+    </footer>
+  </section>
+
+  <!-- Modal for Project Details -->
+  <div id="modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-content" id="modal-content"></div>
+    <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
