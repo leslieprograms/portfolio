@@ -355,6 +355,21 @@ footer {
   .section { padding: 2.5rem 0.7rem 1.5rem 0.7rem; }
   .hero-content h1 { font-size: 2rem; }
   .project-grid { grid-template-columns: 1fr; }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    align-items: stretch;
+  }
+  .navbar li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar a {
+    display: block;
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+  }
 }
 
 /* Accessibility */
