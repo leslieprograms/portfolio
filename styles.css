@@ -370,6 +370,25 @@ footer {
     padding: 0.7rem 0;
     font-size: 1.1rem;
   }
+  .hero-image {
+    width: 100% !important;
+    max-width: 95vw !important;
+    height: auto !important;
+    margin-bottom: 1rem !important;
+  }
+  .bio, .timeline-desc, .skills, .project-card, .modal-content {
+    word-break: break-word;
+    font-size: 1rem;
+  }
+  .btn, .navbar a, .modal-close {
+    min-height: 48px;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
 }
 
 /* Accessibility */
