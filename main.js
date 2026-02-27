@@ -1,3 +1,22 @@
+// ========== HAMBURGER MENU ==========
+const hamburger = document.getElementById('hamburger');
+const navbarMenu = document.getElementById('navbar-menu');
+if (hamburger && navbarMenu) {
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+    hamburger.classList.toggle('active');
+    navbarMenu.classList.toggle('open');
+  });
+  // Close menu when a link is clicked (mobile UX)
+  navbarMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.classList.remove('active');
+      navbarMenu.classList.remove('open');
+    });
+  });
+}
 // ========== NAVBAR ACTIVE LINK & SMOOTH SCROLL ==========
 const navbarLinks = document.querySelectorAll('.navbar a');
 navbarLinks.forEach(link => {
@@ -117,17 +136,23 @@ const experience = [
   {
     title: "Software Engineer Intern @ Scholarty",
     date: "September 2025 - January 2026",
-    desc: "Developed backend services for a social networking platform serving campus organizations, using TypeScript, Node.js, Express.js, PostgreSQL, and Supabase"
+    desc: `Engineered full-stack functionalities for a social networking platform, using TypeScript, Node.js, and Express.js,
+    integrating RESTful APIs for QR code generation and scanning that reduced user connection time by 30%.<br><br>
+    Architected relational schemas in PostgreSQL and Supabase to support complex organizational workflows and ensure platform 
+    scalability.`
   },
   {
     title: "Web Developer (Freelance) - Skin Esthetics by L.E,LLC",
     date: "July 2025- October 2025",
-    desc: "Designed, built, and maintained the company website to strengthen online presence and drive higher client engagement"
+    desc: `Developed and maintained the business website to amplify online presence and drive higher client engagement.<br><br>
+    Prioritized a responsive interface and optimized site performance, resulting in a 20% improvement in page load speeds across
+    all devices.`
   },
   {
     title: "Client Care Specialist @ Blossom Care, LLC",
     date: "September 2022 - Still Present",
-    desc: "Tracked and validated time-sensitive patient medication data, ensuring full compliance with clinical protocols"
+    desc: `Audited time-sensitive patient medication records to ensure strict adherence to clinical protocols.<br><br>
+    Collaborated with multidisciplinary teams to safeguard reporting accuracy and maintain high standards of data integrity.`
   },
 ];
 function renderTimeline() {

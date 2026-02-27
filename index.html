@@ -10,7 +10,12 @@
 <body>
   <!-- Sticky Navbar -->
   <nav id="navbar" class="navbar">
-    <ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul id="navbar-menu">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -37,10 +42,10 @@
   <section id="about" class="section about">
     <h2>About Me</h2>
     <p class="bio"> I am a first-generation college student with a growing passion for programming and emerging technologies. 
-      I’m a Computer Science major at UNLV and currently completing Harvard CS50’s Programming with Python. Also, I stutter occasionally. 
-      Email: leslaygonzalez@gmail.com</p>
+      I’m a Computer Science major at UNLV and currently completing Harvard CS50’s Programming with Python. Also, I stutter occasionally.</p>
     <p> Professional Interests: Software Development, AI, Cloud Computing </p>
     <p> Other Interests: Handheld Gaming Consoles, Movies, Claw Machines, Sanrio, Cycling, Writing</p>
+    <p><span class="emoji-large">&#9993;</span>: leslaygonzalez@gmail.com</p>
     <p> Tech Skills: </p>
     <div class="skills" id="skills"></div>
   </section>
