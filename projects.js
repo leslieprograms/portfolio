@@ -16,7 +16,7 @@ const projects = [
     link: "#",
     github: "#",
     details: "#",
-    image: "assets/dashboard.gif", 
+    image: "assets/Dashboard.gif", 
     /*type: ""*/
   },
   {
