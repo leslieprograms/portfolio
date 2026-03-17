@@ -275,7 +275,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
 }
-.project-card {
+.project-card,
+.project-card[href] {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -289,10 +290,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
 }
 .project-card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 36px 0 rgba(245,163,199,0.18);
+  box-shadow: 0 0 0 8px var(--pink), 0 12px 36px 0 rgba(245,163,199,0.28);
   border-color: var(--pink);
 }
 
