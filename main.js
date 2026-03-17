@@ -81,23 +81,32 @@ function renderProjects() {
   grid.innerHTML = '';
   // Show all projects, no filter
   projects.forEach((project, idx) => {
-    const card = document.createElement('div');
-    card.className = 'project-card reveal';
-    card.tabIndex = 0;
-    card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', `Open details for ${project.title}`);
+    let cardContent = '';
     let imageHTML = '';
     if (project.image) {
       imageHTML = `<img src="${project.image}" alt="${project.title} image" class="project-image" style="width:100%;max-width:320px;border-radius:1rem;margin-bottom:1rem;box-shadow:0 4px 32px 0 rgba(245,163,199,0.18);object-fit:cover;" />`;
     }
-    card.innerHTML = `
+    cardContent = `
       ${imageHTML}
       <h3>${project.title}</h3>
       <p>${project.description}</p>
       <div class="tags">${project.tags.map(t => `<span class='skill-chip'>${t}</span>`).join(' ')}</div>
     `;
-    card.onclick = () => openModal(idx);
-    card.onkeypress = e => { if (e.key === 'Enter') openModal(idx); };
+    let card = document.createElement(project.github && project.github !== '#' ? 'a' : 'div');
+    card.className = 'project-card reveal';
+    if (project.github && project.github !== '#') {
+      card.href = project.github;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      card.setAttribute('aria-label', `View ${project.title} on GitHub`);
+    } else {
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', `Open details for ${project.title}`);
+      card.onclick = () => openModal(idx);
+      card.onkeypress = e => { if (e.key === 'Enter') openModal(idx); };
+    }
+    card.innerHTML = cardContent;
     grid.appendChild(card);
   });
 }
