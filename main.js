@@ -40,6 +40,25 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// ========== HERO IMAGE MOTION ==========
+const heroImage = document.querySelector('.hero-image');
+if (heroImage) {
+  const resetHeroTilt = () => {
+    heroImage.style.transform = 'perspective(760px) rotateX(0deg) rotateY(0deg) scale(1)';
+  };
+
+  heroImage.addEventListener('mousemove', event => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const rect = heroImage.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 24;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * -24;
+    heroImage.style.transform = `perspective(760px) rotateX(${y}deg) rotateY(${x}deg) scale(1.035)`;
+  });
+
+  heroImage.addEventListener('mouseleave', resetHeroTilt);
+  heroImage.addEventListener('blur', resetHeroTilt);
+}
+
 // ========== SKILLS ==========
 const skills = [
   'C/C++', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'APIs', 'SQL', 'Git', 'Python', 'MIPS Assembly', 'UI/UX', 'Supabase'
