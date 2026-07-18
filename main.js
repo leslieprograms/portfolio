@@ -162,6 +162,11 @@ modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 // ========== EXPERIENCE TIMELINE ==========
 const experience = [
   {
+    title: "Application Development Intern @ Clark County Water Reclamation District",
+    date: "June 2026 - Present",
+    desc: ``
+  },
+  {
     title: "Software Engineer Intern @ Scholarty",
     date: "September 2025 - January 2026",
     desc: `Engineered full-stack functionalities for a social networking platform, using TypeScript, Node.js, and Express.js,
@@ -178,7 +183,7 @@ const experience = [
   },
   {
     title: "Client Care Specialist @ Blossom Care, LLC",
-    date: "September 2022 - Still Present",
+    date: "September 2022 - Present",
     desc: `Audited time-sensitive patient medication records to ensure strict adherence to clinical protocols.<br><br>
     Collaborated with multidisciplinary teams to safeguard reporting accuracy and maintain high standards of data integrity.`
   },
