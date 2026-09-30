@@ -265,6 +265,18 @@ body {
   transition: background 0.2s, color 0.2s, transform 0.2s;
   cursor: pointer;
 }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.tags .skill-chip {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
 .skill-chip:hover {
   background: var(--pink);
   color: var(--charcoal-dark);
