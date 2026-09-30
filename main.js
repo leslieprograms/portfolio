@@ -61,7 +61,9 @@ if (heroImage) {
 
 // ========== SKILLS ==========
 const skills = [
-  'C/C++', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'APIs', 'SQL', 'Git', 'Python', 'MIPS Assembly', 'UI/UX', 'Supabase'
+  'C#', 'C++', 'C', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'TypeScript', 'React', 'Next.js', 'Node.js', 
+  'Express.js', 'SQL', 'Git/GitHub', 'Python', 'ASP.NET Core MVC', 'Supabase', 'VS Code', 'Visual Studio',
+  'SSMS', 'API Integration', 'ServiceNow ATF'
 ];
 function renderSkills() {
   const skillsDiv = document.getElementById('skills');
@@ -137,7 +139,7 @@ const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modal-content');
 const modalClose = document.getElementById('modal-close');
 function openModal(idx) {
-  const project = (currentFilter === 'All' ? projects : projects.filter(p => p.type === currentFilter))[idx];
+  const project = projects[idx];
   modalContent.innerHTML = `
     <h3>${project.title}</h3>
     <p>${project.details}</p>
@@ -164,27 +166,38 @@ const experience = [
   {
     title: "Application Development Intern @ Clark County Water Reclamation District",
     date: "June 2026 - Present",
-    desc: ``
+    desc: `Developed and maintained in-house web applications utilizing C#, ASP.NET Core MVC, and Sql Server Management Studio (SSMS) 
+    to optimize backend workflows and streamline system integration.<br><br>
+
+    Analyzed complex system architectures and developed backend database solutions to enhance application performance, 
+    reliability, and functionality.<br><br>
+
+    Automated system upgrade validation using ServiceNow ATF, reducing a weeks-long manual testing process into days and
+    significantly improving release efficiency.`
   },
   {
     title: "Software Engineer Intern @ Scholarty",
     date: "September 2025 - January 2026",
-    desc: `Engineered full-stack functionalities for a social networking platform, using TypeScript, Node.js, and Express.js,
-    integrating RESTful APIs for QR code generation and scanning that reduced user connection time by 30%.<br><br>
+    desc: `Engineered full-stack functionalities for a social networking platform, using TypeScript, Node.js, and Express.js, 
+    integrating RESTful APIs for QR code generation and scanning that reduced user connection time by 30%, and implemented 
+    end-to-end tests with Playwright to increase test coverage.<br><br>
+
     Architected relational schemas in PostgreSQL and Supabase to support complex organizational workflows and ensure platform 
     scalability.`
   },
   {
     title: "Web Developer (Freelance) - Skin Esthetics by L.E,LLC",
     date: "July 2025- October 2025",
-    desc: `Developed and maintained the business website to amplify online presence and drive higher client engagement.<br><br>
-    Prioritized a responsive interface and optimized site performance, resulting in a 20% improvement in page load speeds across
-    all devices.`
+    desc: `Designed and created the official business website to amplify online presence and drive higher client engagement.<br><br>
+
+    Prioritized a fully responsive interface and optimized site performance to ensure fast, seamless loading speeds across all
+    devices.`
   },
   {
     title: "Client Care Specialist @ Blossom Care, LLC",
     date: "September 2022 - Present",
     desc: `Audited time-sensitive patient medication records to ensure strict adherence to clinical protocols.<br><br>
+
     Collaborated with multidisciplinary teams to safeguard reporting accuracy and maintain high standards of data integrity.`
   },
 ];

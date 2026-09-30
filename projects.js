@@ -1,5 +1,15 @@
 const projects = [
   {
+    title: "Synqo",
+    description: "Synqo is a full-stack Next.js/Supabase app that lets users share their movie, TV, and game taste on a public profile, backed by a relational Postgres Schema with row-level security controlling per-user data access.",
+    tags: ["Typescript", "Javascript", "React", "CSS", "HTML", "Next.js", "APIs", "Supabase", "SQL"],
+    link: "#",
+    github: "https://github.com/leslieprograms/synqo",
+    details: "#",
+    image: "assets/demo.gif", 
+    /*type: ""*/
+  },
+  {
     title: "Client Website",
     description: "A responsive site for a small local business built with just HTML and CSS.",
     tags: ["UI", "HTML", "CSS"],
@@ -7,16 +17,6 @@ const projects = [
     github: "https://github.com/leslieprograms/client-website",
     details: "#",
     image: "assets/esthetics.gif", 
-    /*type: ""*/
-  },
-  {
-    title: "InboxPilot",
-    description: "An AI-assisted support inbox that classifies incoming requests, drafts replies from a knowledge base, and routes tickets through a configurable approval workflow.",
-    tags: ["AI", "APIs", "TypeScript", "Supabase"],
-    link: "#",
-    github: "https://github.com/leslieprograms/inboxpilot",
-    details: "#",
-    image: "assets/Dashboard.gif", 
     /*type: ""*/
   },
   {
